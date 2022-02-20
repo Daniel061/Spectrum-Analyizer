@@ -15,7 +15,7 @@ public class Scriptable : ScriptableObject
 
     [Header("Data Collections")]
     public float[] Frequencies;
-    public Scrollbar[] ScrollBarList;
+    public List<Scrollbar> ScrollBarList;
     public AudioClip audioClip;
 
 
