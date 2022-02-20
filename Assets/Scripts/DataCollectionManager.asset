@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: DataManager
-  m_EditorClassIdentifier: Assembly-CSharp::ScriptableDataManager
+  m_Script: {fileID: 11500000, guid: 2dd31cf8d83432a43ba311ae5f81bad2, type: 3}
+  m_Name: DataCollectionManager
+  m_EditorClassIdentifier: 
   SampleSize: 1024
-  frequencies: []
+  Frequencies: []
+  ScrollBarList: []
+  audioClip: {fileID: 8300000, guid: 6a524b9c44f39ad4089ba0cbc9e3a76b, type: 3}
+  Gain: 0
