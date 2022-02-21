@@ -21,4 +21,8 @@ public class Scriptable : ScriptableObject
 
     [Header("Tuning")]
     public float Gain;
+
+
+
+     
 }

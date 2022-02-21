@@ -7,9 +7,9 @@ public class AudioSourceControl : MonoBehaviour
 {
     AudioSource audioSource;
     public Scriptable DataCollections;
-    
+    FFTWindow window;
 
-    // Start is called before the first frame update
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -21,9 +21,9 @@ public class AudioSourceControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DataCollections.Frequencies = new float[DataCollections.SampleSize];
+        audioSource.GetSpectrumData(DataCollections.Frequencies, 0, window);
     }
-
     public void LoadClip()
     {
         audioSource.clip = DataCollections.audioClip;

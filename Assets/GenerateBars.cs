@@ -24,7 +24,7 @@ public class GenerateBars : MonoBehaviour
 
             for (int i = 1; i < DataCollections.SampleSize / 2; i++)
             {
-                barPosition.x = (i+(-1 * DataCollections.SampleSize / 4)) * 5;
+                barPosition.x = ((i+(-1 * DataCollections.SampleSize / 4)) * 7);
                 barPosition.y = 52;
                 barPosition.z = 0;
                 // Debug.Log("New bar created at " + barPosition);
