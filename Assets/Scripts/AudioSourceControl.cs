@@ -11,6 +11,8 @@ public class AudioSourceControl : MonoBehaviour
     //https://docs.unity3d.com/530/Documentation/ScriptReference/UI.Button-onClick.html
     public Button loadFileButton;
     public Button exitApplicationButton;
+    public Toggle useSmoothingToggle;
+   // public delegate void ChangeUseSmoothing();
     FFTWindow window;
 
 
@@ -25,6 +27,10 @@ public class AudioSourceControl : MonoBehaviour
         btn.onClick.AddListener(LoadAudioFromFile);
         Button btnExit = exitApplicationButton.GetComponent<Button>();
         btnExit.onClick.AddListener(() => ExitApplication());
+
+        Toggle useListner = useSmoothingToggle.GetComponent<Toggle>();
+        useListner.runInEditMode = true;
+        //useListner.OnPointerClick += ChangeUseSmoothing;
     }
 
 
@@ -59,5 +65,8 @@ public class AudioSourceControl : MonoBehaviour
         Application.Quit();
     }
 
-
+    void ChangeUseSmoothing()
+    {
+        if(DataCollections.UseSmoothing) DataCollections.UseSmoothing = false; else DataCollections.UseSmoothing = true;    
+    }
 }

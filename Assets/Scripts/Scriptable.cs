@@ -22,6 +22,7 @@ public class Scriptable : ScriptableObject
     [Header("Tuning")]
     public float Gain;
     public bool UseLinearGain;
+    public bool UseSmoothing;
 
 
 
